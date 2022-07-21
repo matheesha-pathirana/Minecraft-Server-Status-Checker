@@ -14,6 +14,7 @@ latency = server.latency
 server_ip = server.address
 server_port = server.port
 game_mode = server.gamemode
+protocol = server.slp_protocol
 
 if server.online:
     print(f'> Sever IP - {server_ip}')
@@ -22,10 +23,10 @@ if server.online:
     print(f'> Motd - {motd}')
     print(f'> Players - {current_players} out of {max_players} players')
     print(f'> Latency - {latency} ms')
-    print('> Connected using protocol - %s' % server.slp_protocol)
+    print(f'> Connected using protocol - {protocol}')
 
     # Bedrock specific attribute
     if server.slp_protocol is minestat.SlpProtocols.BEDROCK_RAKNET:
-        print('Game mode: %s' % server.gamemode)
+        print(f'Game mode - {server.gamemode}')
 else:
     print('Server is offline!')
