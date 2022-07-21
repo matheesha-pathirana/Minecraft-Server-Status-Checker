@@ -1,7 +1,5 @@
 import minestat
 
-# server_ip=input('Enter Server IP : ')
-# server = minestat.MineStat(f'{server_ip}', 25565)
 
 server = minestat.MineStat('152.67.101.206', 25565)  # server ip and port
 print('<<< Minecraft server status of %s on port %d >>>\n' % (server.address, server.port))
